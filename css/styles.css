@@ -1,8 +1,13 @@
 :root {
   --primary-text-color: #212121;
   --second-text-color: #757575;
+  --third-text-color: #ffffff;
   --accent-color: #2196f3;
-  --background-color: #ffffff:
+  --logo-color: #000000;
+  --background-color: #ffffff;
+  --second-backgraund-color: #2f303a;
+  --btn-color: #f5f4fa;
+  --address-color: rgba(255, 255, 255, 0.6);
 }
 
 body {
@@ -13,19 +18,10 @@ body {
 .list {
   list-style: none;
 }
-/* текст основной #212121 */
-/* текст вторичный #757575 */
-/* акцент #2196F3 */
-/* белый #FFFFFF */
-/* подвал rgba(255, 255, 255, 0.6); */
-/* studio #000000 */
-/* цвет фона #FFFFFF */
-/* вторичный цвет #2F303A */
-/* команда #F5F4FA */
 
 /* --------------HEADER------------- */
 .logo {
-  color: #000000;
+  color: var(--logo-color);
 }
 .logo:hover,
 .logo:focus {
@@ -41,6 +37,9 @@ body {
 .site-nav .link:focus {
   color: var(--accent-color);
 }
+.site-nav .link.current {
+  color: var(--accent-color);
+}
 .auth-nav .link {
   color: var(--second-text-color);
 }
@@ -51,12 +50,23 @@ body {
 
 /* --------------HERO------------- */
 .hero-title {
-  color: #ffffff;
-  background-color: #2f303a;
+  color: var(--third-text-color);
+  background-color: var(--second-backgraund-color);
 }
+
+/* button */
 .hero-btn,
 .filter-btn {
   cursor: pointer;
+}
+.hero-btn {
+  background-color: var(--accent-color);
+  color: var(--third-text-color);
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #188ce8;
+  color: var(--third-text-color);
 }
 
 /* --------------SPECIFICS------------- */
@@ -69,21 +79,46 @@ body {
 }
 
 /* --------------TEAM------------- */
+.team {
+  background-color: var(--btn-color);
+}
+.team-list .item {
+  background-color: var(--background-color);
+}
 .team-list .text {
   color: var(--second-text-color);
 }
 
 /* --------------FOOTER------------- */
 .footer {
-  background-color: #2f303a;
+  background-color: var(--second-backgraund-color);
+}
+.logo-footer {
+  color: var(--third-text-color);
 }
 .street-item {
-  color: #ffffff;
+  color: var(--third-text-color);
 }
 .footer-list .link {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--address-color);
 }
 .footer-list .link:hover,
 .footer-list .link:focus {
   color: var(--accent-color);
+}
+
+/* --------------PORTFOLIO.HTML------------- */
+
+/* --------------WORK LIST------------- */
+.filter-btn {
+  background-color: var(--btn-color);
+  color: var(--primary-text-color);
+}
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--third-text-color);
+}
+.filter .filter-text {
+  color: var(--second-text-color);
 }
